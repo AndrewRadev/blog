@@ -1,0 +1,74 @@
+---
+layout: post
+title: "OHM 2013"
+date: 2013-08-18 11:02
+comments: true
+categories: vim conferences
+published: true
+---
+
+I went to [OHM](https://ohm2013.org/site/) (Observe, Hack, Make) this year, a
+hacker festival in the Netherlands. It was a fun week of camping, freedom
+talks, technology, retro-gaming and all sorts of other cool stuff. Since I was
+going there anyway, I decided to make a Vim event to spread word of the One
+True Editor.
+
+<!-- more -->
+
+It was a three-day Vim workshop and I'm pretty happy with how it went. The
+first day I talked about the very basics, things like moving around in a buffer
+and opening files. It was only an hour, which is not nearly enough to learn
+anything practical, but I tried to at least show the basic philosophy of Vim as
+I see it. My final summary was something along the lines of:
+
+- **It uses semantic movements**. Instead of pointing where the cursor should
+  go, Vim can simply be told what to do, like "select a paragraph" or "delete
+  the next two lines".
+- **It's all text**. The interface is completely textual, no animations, no
+  fancy icons. This limitation, however, ends up for the better -- there's a
+  lot of amazing UI-related plugins that build directory trees and fuzzy-finder
+  dialogs with pure text.
+- **It's only text**. Vim is at its best when it's editing text, and for
+  everything else, it works great with external programs.
+- **It's extensible**. There's an amazing amount of plugins out there, and
+  writing some simple tools of your own is not difficult at all.
+
+I also pointed the attendees to my usual sources of beginner knowledge:
+
+- [The Vim subreddit](http://www.reddit.com/r/vim). Filled with discussions on
+  new plugins, workflows and Vim features.
+- [Stack Overflow](http://stackoverflow.com/questions/tagged/vim). Excellent
+  place to ask Vim-related newbie questions.
+- And, of course, the good ol'
+  [:help](http://vimdoc.sourceforge.net/htmldoc/usr_toc.html). Some of the best
+  documentation on a piece of software I've seen so far.
+
+The second day was something like a workflow show-and-tell. I went through some
+of my personal tricks, like how I navigate through a project, how I arrange
+windows as I'm working, how I deal with language-specific tools. I prompted
+everyone to share their own workflows on these topics and they didn't
+disappoint. Before you know it, we were talking about registers,
+`relativenumber` and various plugins. Regrettably, I didn't keep notes after
+the workshop, but I'm going to present the second day's content to a few folks
+here in Berlin, so maybe I'll make it a bit more organized and publish it
+afterwards.
+
+The third day was the Vimscript day. I skimmed through some scripting basics,
+like if-clauses, for-loops and the likes. This part was mostly glossed over as
+"it works pretty much as you'd expect for simple cases". I tried to focus on
+the more interesting parts like variable scopes, functions and commands. For a
+more workflow-related angle, I talked about how to think about separating the
+user interface part from the actual scripting part, reiterating some points
+from an old talk/blog post,
+"[Lessons Learned From Building Splitjoin](http://andrewradev.com/2012/11/27/vimberlin-lessons-learned-from-building-splitjoin/#comment-773330766)".
+To get a feel of how it all fits together I wrote a simplified version of my
+simple `:Grep` command from this
+[gist](https://gist.github.com/AndrewRadev/2979701). I wanted to talk more
+about debugging and testing, but there wasn't enough time. I still managed to
+squeeze in a demo of the
+[Decho](http://www.vim.org/scripts/script.php?script_id=120) plugin, one of my
+favourite debugging tools.
+
+All in all, it was a fun couple of days, and I hope everyone that came learned
+something useful. Next time, I should definitely try to keep some more detailed
+notes for sharing purposes.
