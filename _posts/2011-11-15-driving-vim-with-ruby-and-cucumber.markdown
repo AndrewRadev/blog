@@ -72,7 +72,7 @@ from spork's features,
 Later, I managed to clear up a lot of the stream duplication and closing logic
 by using `Process#spawn` ([docs](http://www.ruby-doc.org/core-1.9.3/Process.html#method-c-spawn)):
 
-``` ruby runner.rb
+``` ruby
 class Runner
   def self.start
     command = 'gvim -f --servername VIMRUNNER'
@@ -98,7 +98,7 @@ we don't want them to mess up the parent's output in the terminal. The PID is
 kept in an instance variable, so the process can be killed later. The `kill`
 method is fairly simple as well:
 
-``` ruby runner.rb
+``` ruby
 def kill
   Process.kill('TERM', @pid)
   true
@@ -114,7 +114,7 @@ so `kill` is safe to call regardless of the state of the Vim instance.
 At this point, the `Runner` can only start Vim and kill it. The next step is
 actually doing something interesting in the instance.
 
-``` ruby runner.rb
+``` ruby
 def type(keys)
   system('vim', '--servername', 'VIMRUNNER', '--remote-send', keys)
 end
@@ -140,7 +140,7 @@ commands.
 
 For convenience's sake, I could add a method that does that for me:
 
-``` ruby runner.rb
+``` ruby
 def quit
   vim.type '<c-\><c-n>ZZ'
 end
@@ -150,7 +150,7 @@ This is exactly how a simple DSL can be built for controlling Vim. The `type`
 method can be used as a basis for other, more complicated ones. Here's an
 implementation of `edit` and `write` methods:
 
-``` ruby runner.rb
+``` ruby
 def edit(filename)
   type "<c-\\><c-n>:edit #{filename}<cr>"
 end
@@ -176,7 +176,7 @@ would show up only in scripted interaction -- timing. When `vim.edit` is
 executed, the vim instance is probably not started yet, which causes a problem
 when the script attempts to connect to it. Here's a possible solution:
 
-``` ruby runner.rb runner.rb
+``` ruby
 def wait_until_started
   serverlist = Runner.serverlist
   while serverlist.empty? or not serverlist.include? 'VIMRUNNER'
@@ -203,7 +203,7 @@ timing, that is).
 
 So what could we do? The hacky solution is to simply ping the server again.
 
-``` ruby runner.rb
+``` ruby
 def write
   type '<c-\><c-n>:w<cr>'
   type '<c-\><c-n>'
@@ -228,7 +228,7 @@ However, commands, the most basic building block of vimscript, are not
 expressions. So, let's write some vimscript to execute a command and return its
 output.
 
-``` vim vimrc
+``` vim
 function! VimrunnerEvaluateCommandOutput(command)
   redir => output
     silent exe a:command
@@ -248,7 +248,7 @@ Loading the script in the server instance will require modifying the `start`
 method a bit.
 
 
-``` ruby runner.rb
+``` ruby
 def self.start
   command = "gvim -f -u #{vimrc_path} --noplugin --servername VIMRUNNER"
   # ...
@@ -263,7 +263,7 @@ The `vimrc_path` method should return the path to the newly created vimrc file.
 The `--noplugin` flag might not be necessary, but is a good idea to avoid
 plugin issues. Adding some minimal configuration would also be a good idea:
 
-``` vim vimrc
+``` vim
 set nocompatible
 
 filetype plugin on
@@ -274,7 +274,7 @@ syntax on
 So now, it's completely possible to define a `command` method that returns a
 command's output and implement `write` and `edit` in terms of that.
 
-``` ruby runner.rb
+``` ruby
 def command(vim_command)
   expression = "VimrunnerEvaluateCommandOutput('#{vim_command.to_s}')"
   system('vim', '--servername', 'VIMRUNNER', '--remote-expr', expression).strip
@@ -299,7 +299,7 @@ Now, I'll take a look at a part of my
 [splitjoin](https://github.com/AndrewRadev/splitjoin.vim) plugin and see how it
 can be specified with a cucumber feature. Here's the scenario I came up with:
 
-``` cucumber features/css_support.feature
+``` cucumber
 Feature: CSS support
 
   Scenario: Splitting single-line style definitions
@@ -326,7 +326,7 @@ Feature: CSS support
 A few steps are straightforward to implement with what's currently defined in
 the `Runner` class.
 
-``` ruby features/step_definitions/vim_steps.rb
+``` ruby
 require './runner'
 
 Given /^Vim is running$/ do
@@ -352,7 +352,7 @@ Since the code is creating temporary files, it's important to move into a
 temporary directory while running the suite. It would also be useful to kill
 the vim instance after each scenario, provided one is started.
 
-``` ruby features/step_definitions/vim_steps.rb
+``` ruby
 require 'tmpdir'
 
 Before do
@@ -371,14 +371,14 @@ The remaining steps require some more tinkering with the runner. Loading a
 plugin is one thing that might seem a bit daunting at first. Turns out, it's
 not that difficult at all once we have the `command` method.
 
-``` ruby features/step_definitions/vim_steps.rb
+``` ruby
 Given /^the splitjoin plugin is loaded$/ do
   plugin_dir = File.expand_path('../../..', __FILE__) # or whatever is necessary
   @vim.add_plugin plugin_dir, 'plugin/splitjoin.vim'
 end
 ```
 
-``` ruby runner.rb
+``` ruby
 def add_plugin(dir, entry_script)
   command("set runtimepath+=#{dir}")
   command("runtime #{entry_script}")
@@ -394,13 +394,13 @@ Positioning the cursor at some specific text in the buffer is quite simple
 through `type` and the standard vim search. We could also implement a method to
 call functions, but for now, this will do just fine:
 
-``` ruby features/step_definitions/vim_steps.rb
+``` ruby
 Given /^the cursor is positioned on "([^"]*)"$/ do |text|
   @vim.search text
 end
 ```
 
-``` ruby runner.rb
+``` ruby
 def search(text)
   type "<c-\\><c-n>/#{text}<cr>"
 end
@@ -409,7 +409,7 @@ end
 The steps that deal with settings can easily go through `command`, but let's
 implement another method to abstract this away.
 
-``` ruby features/step_definitions/vim_steps.rb
+``` ruby
 Given /^"([^"]*)" is set$/ do |boolean_setting|
   @vim.set boolean_setting
 end
@@ -419,7 +419,7 @@ Given /^"([^"]*)" is set to "([^"]*)"$/ do |setting, value|
 end
 ```
 
-``` ruby runner.rb
+``` ruby
 def set(setting, value = nil)
   if value
     command "set #{setting}=#{value}"
@@ -432,7 +432,7 @@ end
 The only thing left is the line splitting step. Since the plugin is already
 loaded, there's not much to it:
 
-``` ruby features/step_definitions/vim_steps.rb
+``` ruby
 When /^I split the line$/ do
   @vim.command 'SplitjoinSplit'
 end

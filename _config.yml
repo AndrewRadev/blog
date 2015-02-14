@@ -6,8 +6,10 @@ baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://andrewradev.com"
 twitter_username: AndrewRadev
 github_username:  AndrewRadev
-highlighter: rouge
 excerpt_separator: '<!-- more -->'
 
+permalink: /:year/:month/:day/:title/
+
 # Build settings
-markdown: kramdown
+markdown: redcarpet
+highlighter: rouge

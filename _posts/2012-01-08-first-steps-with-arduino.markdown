@@ -140,7 +140,7 @@ one. So, I decided to do something a bit different.
 
 First, let's create a `main.h` header file:
 
-``` cpp main.h
+``` cpp
 #include "Arduino.h"
 
 #define MAIN \
@@ -171,7 +171,7 @@ important.
 
 The actual sketch should now look something like this:
 
-``` cpp main.cpp
+``` cpp
 #include "main.h"
 
 void setup() { /* ... */ }

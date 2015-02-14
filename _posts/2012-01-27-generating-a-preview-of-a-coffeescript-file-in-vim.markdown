@@ -43,7 +43,8 @@ shell redirection, so there's no chance of it running on Windows.
 
 This should be called in an ftplugin vim file:
 
-``` vim ftplugin/coffee.vim
+``` vim
+" ftplugin/coffee.vim
 call SetupPreview('js', 'coffee -p %s')
 ```
 
@@ -103,6 +104,7 @@ wondering why it expects the extension and the external command as parameters,
 it's because you can use the same code for other kinds of preprocessing. To get
 it to work for markdown, this should be enough:
 
-``` vim fplugin/markdown.vim
+``` vim
+" fplugin/markdown.vim
 call SetupPreview('markdown', 'markdown %s')
 ```

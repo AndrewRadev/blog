@@ -206,7 +206,7 @@ case L.head (arguments opts) of
 What's going on here? It seems like the command is `status`, just like it
 should be, but the case statement that handles it doesn't work. Well, the
 problem should be obvious from the given code above, but I only realized it
-after adding some logging. The error message is `Uknown command: "status"`, but
+after adding some logging. The error message is `Unknown command: "status"`, but
 notice that the code displaying the message doesn't wrap `status` in quotes.
 What the `opt` function stores in the arguments turns out to be `"status"`, not
 `status`. Here's the code of `opt` in the `cmdArgs` package:

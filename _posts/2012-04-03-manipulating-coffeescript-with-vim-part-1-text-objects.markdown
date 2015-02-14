@@ -176,9 +176,8 @@ function! s:FunctionTextObject(type)
     return
   endif
 
-  let body_start = function_start + 1
-  " TODO (2012-03-31) if indent(body_start) == indent(function_start)
-  let indent_limit   = s:LowerIndentLimit(body_start)
+  let body_start   = function_start + 1
+  let indent_limit = s:LowerIndentLimit(body_start)
 
   if a:type == 'i'
     let start = body_start

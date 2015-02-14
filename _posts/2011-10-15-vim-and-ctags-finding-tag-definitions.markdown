@@ -52,7 +52,7 @@ work nailed down, so I'm confident enough to deal with the user interface.
 So, to start off, let's write a few functions that retrieve tags, filtered the
 way I like. The first one will be used when I have a full tag.
 
-``` vim plugin/taglist.vim
+``` vim
 function! FindTags(name, kinds)
   let tag_list = []
 
@@ -81,7 +81,7 @@ this one, I need to look for any tags starting with a certain string. Also,
 there's no point in keeping all the data from the found tags, a name would be
 enough for the purposes of completion.
 
-``` vim plugin/taglist.vim
+``` vim
 function! FindTagNamesByPrefix(prefix, kinds)
   let tag_set = {}
 
@@ -127,7 +127,7 @@ Let's start with writing a command that opens up the quickfix window with all
 found tags. To simplify things, I'll look only for classes first, and see how I
 can generalize things later.
 
-``` vim plugin/taglist.vim
+``` vim
 command! -nargs=1 FindClass call s:FindClass(<f-args>)
 function! s:FindClass(name)
   let qflist = []
@@ -168,7 +168,7 @@ step-by-step:
 Let's handle some edge cases now by adding some checks to the final lines of
 the function.
 
-``` vim plugin/taglist.vim
+``` vim
 function! s:FindClass(name)
   " ...
 
@@ -194,7 +194,7 @@ look for functions. It seems like the only difference between them is in the
 parameter given to `FindTags`. Let's just rewrite the `s:FindClass` function to
 take an additional argument and rename it to something more generic.
 
-``` vim plugin/taglist.vim
+``` vim
 command! -nargs=1 FindClass    call s:JumpToTag(<f-args>, ['c', 'class'])
 command! -nargs=1 FindFunction call s:JumpToTag(<f-args>, ['f', 'method', 'F', 'singleton method'])
 function! s:JumpToTag(name, kinds)
@@ -214,12 +214,12 @@ languages use different kind names. In that case, I can buffer-localize the
 commands and make the `s:JumpToTag()` function global, so it's accessible in
 the filetype plugins.
 
-``` vim ftplugin/ruby.vim
+``` vim
 command! -buffer -nargs=1 FindClass    call JumpToTag(<f-args>, ['c', 'class'])
 command! -buffer -nargs=1 FindFunction call JumpToTag(<f-args>, ['f', 'method', 'F', 'singleton method'])
 ```
 
-``` vim ftplugin/vim.vim
+``` vim
 command! -buffer -nargs=1 FindCommand  call JumpToTag(<f-args>, ['c', 'command'])
 command! -buffer -nargs=1 FindFunction call JumpToTag(<f-args>, ['f', 'function'])
 ```
@@ -235,7 +235,7 @@ I create a better interface for defining them.
 A big issue is the lack of command-line completion. Thankfully, this is easy
 enough to implement (for now).
 
-``` vim plugin/tagfinder.vim
+``` vim
 command! -buffer -nargs=1 -complete=customlist,s:CompleteFindClass FindClass call JumpToTag(<f-args>, ['c', 'class'])
 function! s:CompleteFindClass(lead, command_line, cursor_pos)
   if len(a:lead) > 0
@@ -333,7 +333,7 @@ The last part of the puzzle is, again, completion. I'll make it dynamic by
 tracking all tag-finding commands defined in the buffer and determining the
 completion depending on the `a:command_line` argument.
 
-``` vim plugin/tagfinder.vim
+``` vim
 command! -nargs=+ DefineLocalTagFinder call s:DefineLocalTagFinder(<f-args>)
 function s:DefineLocalTagFinder(name, kinds)
   if !exists('b:tagfinder_commands')
@@ -388,7 +388,8 @@ There are a few more things that need to be done to make this a proper plugin.
 For starters, the global functions need to be autoloaded to avoid polluting the
 global namespace.
 
-``` vim autoload/tagfinder.vim
+``` vim
+" in autoload/tagfinder.vim
 function! tagfinder#CompleteTagFinder(lead, command_line, cursor_pos)
   " ...
 endfunction
@@ -411,7 +412,7 @@ commands. If you code almost exclusively in ruby, you could do that with the
 above `FindFunction` and `FindClass` to avoid being unable to search when
 you're in a buffer with a different filetype.
 
-``` vim plugin/tagfinder.vim
+``` vim
 if !exists('b:tagfinder_commands')
   let g:tagfinder_commands = {}
 endif
@@ -424,7 +425,7 @@ function s:DefineTagFinder(name, kinds)
 endfunction
 ```
 
-``` vim autoload/tagfinder.vim
+``` vim
 function! tagfinder#CompleteTagFinder(lead, command_line, cursor_pos)
   if !exists('b:tagfinder_commands')
     let b:tagfinder_commands = {}

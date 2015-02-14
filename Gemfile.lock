@@ -69,4 +69,5 @@ PLATFORMS
 
 DEPENDENCIES
   jekyll
+  redcarpet
   rouge

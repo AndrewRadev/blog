@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-![Hello, there](http://gravatar.com/avatar/fc59401781a26b10f5d4fc5b758fb3b7.png?s=140)
+<img class="about-image" src="http://gravatar.com/avatar/fc59401781a26b10f5d4fc5b758fb3b7.png?s=192" alt="Hello, there" />
 
 Hi, my name's Andrew and I'm a programmer. I code mostly in [Ruby](http://ruby-lang.org) and [Rails](http://rubyonrails.org/), but I try to play around with other stuff every once in a while. My current language of interest is [Rust](http://www.rust-lang.org/). I'm also learning R and data science on [coursera](https://www.coursera.org/specialization/jhudatascience/1). You can find me as "AndrewRadev" on [github](http://github.com/AndrewRadev) and on [twitter](http://twitter.com/AndrewRadev).
 
