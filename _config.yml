@@ -10,6 +10,11 @@ excerpt_separator: '<!-- more -->'
 
 permalink: /:year/:month/:day/:title/
 
+# Exclude some service files:
+exclude:
+  - 'Gemfile'
+  - 'Gemfile.lock'
+
 # Build settings
 markdown: redcarpet
 highlighter: rouge
