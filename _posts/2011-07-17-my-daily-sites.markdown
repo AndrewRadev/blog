@@ -8,7 +8,7 @@ categories: projects
 
 For a while now, I've been working on a little website to manage some sites I
 visit regularly. I call it "Daily Sites" and it's at
-[http://daily-sites.heroku.com](http://daily-sites.heroku.com/).
+[http://daily-sites.andrewradev.com](http://daily-sites.andrewradev.com/).
 Since it works just fine for me and I got around to writing a small about page
 for it, I thought it's finally time to show it to other people with the hope
 that it might be useful for them as well.

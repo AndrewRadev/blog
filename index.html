@@ -3,11 +3,12 @@ layout: default
 ---
 
 <div class="home">
+  <p class="rss-subscribe">subscribe <a href="{{ "/feed/" | prepend: site.baseurl }}">via RSS</a></p>
 
   <h1 class="page-heading">Posts</h1>
 
   <ul class="post-list">
-    {% for post in site.posts %}
+    {% for post in paginator.posts %}
       <li>
         <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
 
@@ -24,6 +25,23 @@ layout: default
     {% endfor %}
   </ul>
 
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed/" | prepend: site.baseurl }}">via RSS</a></p>
+  <!-- Pagination links -->
+  <div class="pagination">
+    {% if paginator.previous_page %}
+      <a href="{{ paginator.previous_page_path }}" class="previous">Newer</a>
+    {% else %}
+      <span class="previous">Newer</span>
+    {% endif %}
+
+    <div class="page-number">{{ paginator.page }}/{{ paginator.total_pages }}</div>
+
+    {% if paginator.next_page %}
+      <a href="{{ paginator.next_page_path }}" class="next">Older</a>
+    {% else %}
+      <span class="next">Older</span>
+    {% endif %}
+
+    <div class="clear"></div>
+  </div>
 
 </div>
