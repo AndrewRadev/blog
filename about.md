@@ -32,6 +32,8 @@ Here are a few of my more interesting projects:
 
 - [digits](https://github.com/AndrewRadev/digits) is a university project in C that attempts to recognize a digit from a given image. It's very limited, but it was an interesting exercise in image recognition.
 
+- [green-cubes](https://github.com/AndrewRadev/green-cubes) is just a tiny webgl experiment for my talk at [BurgasConf 2014](https://github.com/AndrewRadev/BurgasConf-2014).
+
 And some Vim plugins, if you're into that:
 
 - [splitjoin](https://github.com/AndrewRadev/splitjoin.vim) lets you switch between multiline and single-line versions of the same code.
