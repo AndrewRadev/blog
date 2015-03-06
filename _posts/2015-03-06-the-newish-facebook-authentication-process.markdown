@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "The New(ish) Facebook Authentication"
+title: "The New(ish) Facebook Authentication Process"
 date: 2015-03-06 15:18
 comments: true
 categories: ruby rails facebook
