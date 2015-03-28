@@ -7,9 +7,9 @@
 
   <span class="post-categories">Categories: {{ post.categories | category_links }}</span>
 
-  <p>
+  <article>
     {{ post.excerpt | markdownify }}
 
     <a href="{{ post.url | prepend: site.baseurl }}">[...]</a>
-  </p>
+  </article>
 </li>
