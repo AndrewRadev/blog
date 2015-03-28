@@ -9,21 +9,7 @@ layout: default
 
   <ul class="post-list">
     {% for post in paginator.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-
-        <span class="post-categories">{{ post.categories | join: ', ' }}</span>
-
-        <p>
-          {{ post.excerpt }}
-
-          <a href="{{ post.url | prepend: site.baseurl }}">[...]</a>
-        </p>
-      </li>
+      {% include post_excerpt.html %}
     {% endfor %}
   </ul>
 

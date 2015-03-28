@@ -3,7 +3,7 @@ layout: post
 title: "Generating a Preview of a Coffeescript File in Vim"
 date: 2012-01-27 16:26
 comments: true
-categories: vim, coffeescript
+categories: vim coffeescript
 ---
 
 I started writing a bit of coffeescript recently. One of its benefits is that

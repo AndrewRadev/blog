@@ -1,0 +1,13 @@
+---
+layout: default
+---
+
+<div class="home">
+  <h1 class="page-heading">Category: {{ page.category }}</h1>
+
+  <ul class="post-list">
+    {% for post in site.categories[page.category] %}
+      {% include post_excerpt.html %}
+    {% endfor %}
+  </div>
+</div>
