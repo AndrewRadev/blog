@@ -15,7 +15,7 @@ Facebook changed their authentication process [fairly recently](https://develope
 
 The way things worked in The Old Times, you had a facebook app, authenticated with it, got a user id and saved it to the database. Upon the next facebook authentication, you'd get the same id and find it in the database, logging the relevant user in. Usually, you'd maintain multiple different apps for production, development, staging, and whatever other domain you need, since apps were only limited to a single domain.
 
-For rails developers, [Omniauth](https://github.com/mkdynamic/omniauth-facebook) helped a lot. With that, all you needed to do is hook up a link to the right url. Sending the user to it would redirect them to facebook, log them in there, and provide you the id in `request.env['omniauth.auth']` under the key `:uid`.
+For rails developers, [Omniauth](https://github.com/mkdynamic/omniauth-facebook) helped a lot. With that, all you needed to do was hook up a link to the right url. Sending the user to it would redirect them to facebook, log them in there, and provide you the id in `request.env['omniauth.auth']` under the key `:uid`.
 
 ## The Changes
 
