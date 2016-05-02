@@ -6,11 +6,11 @@ permalink: /about/
 
 <img class="about-image" src="http://gravatar.com/avatar/fc59401781a26b10f5d4fc5b758fb3b7.png?s=192" alt="Hello, there" />
 
-Hi, my name's Andrew and I'm a programmer. I code mostly in [Ruby](http://ruby-lang.org) and [Rails](http://rubyonrails.org/), but I try to play around with other stuff every once in a while. My current language of interest is [Rust](http://www.rust-lang.org/). I'm also learning R and data science on [coursera](https://www.coursera.org/specialization/jhudatascience/1). You can find me as "AndrewRadev" on [github](http://github.com/AndrewRadev) and on [twitter](http://twitter.com/AndrewRadev).
+Hi, my name's Andrew and I'm a programmer. I code mostly in [Ruby](http://ruby-lang.org) and [Rails](http://rubyonrails.org/), but I try to play around with other stuff every once in a while. You can find me as "AndrewRadev" on [github](http://github.com/AndrewRadev) and on [twitter](http://twitter.com/AndrewRadev).
 
 I'm a dedicated [Vim](http://vim.org) user and I've created a [bunch of Vim plugins](http://www.vim.org/account/profile.php?user_id=31799). I maintain the [VimLinks](https://twitter.com/vimlinks) twitter account, I'm one of the maintainers of the [official ruby bindings for vim](https://github.com/vim-ruby/vim-ruby) (but I'm pretty bad at keeping up with the work there), and I own the runtime files for Vim's [eco support](https://github.com/AndrewRadev/vim-eco).
 
-I have a few non-programming hobbies, mostly standard geeky stuff. I love watching anime and reading manga. I enjoy video games, mostly RPGs. I'm also a [Doctor Who](http://www.bbc.co.uk/doctorwho/dw) fan, but only of the 2005 series. I'm learning the guitar, even though the best I can do right now is practice chords.
+I have a few non-programming hobbies, mostly standard geeky stuff. I love watching anime and reading manga. I enjoy video games, mostly RPGs. I'm also a [Doctor Who](http://www.bbc.co.uk/doctorwho/dw) fan, but only of the 2005 series. I'm learning the guitar, even though I've yet to be able to play a single song from start to finish.
 
 In this blog, I write about my programming-related experiences. Most of the articles seem to be about Vim, but in general, I blog about a bunch of different stuff.
 
