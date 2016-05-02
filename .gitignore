@@ -2,3 +2,5 @@ _site
 .sass-cache
 deploy
 _drafts/
+.bundle/
+.jekyll-metadata

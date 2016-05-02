@@ -18,6 +18,6 @@ exclude:
   - 'Gemfile.lock'
   - 'deploy'
 
-# Build settings
-markdown: redcarpet
-highlighter: rouge
+# Include additional plugins
+gems:
+  - 'jekyll-paginate'
