@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Building a better gf mapping"
+title: "Building a Better gf Mapping"
 date: 2016-03-09 11:44
 comments: true
 categories: vim ember
-published: false
+published: true
 ---
 
 I recently started working with ember.js. It's a nice framework, but, like most newish technologies, Vim support is minimal. So, as I usually do in such cases, I started working on some tools to help me out with navigation. Tim Pope's [projectionist](https://github.com/tpope/vim-projectionist) helped a lot, but I wanted more, so I started building it up in what would later be published as [ember_tools](https://github.com/AndrewRadev/ember_tools.vim).
@@ -51,7 +51,7 @@ If you poke around enough in vim-rails' source code, looking for how `gf` works,
 cmap <buffer><script><expr> <Plug><cfile> rails#cfile('delegate')
 ```
 
-It maps the (fake) key sequence `<Plug><cfile>` to the expression `rails#cfile('delegate')` function. Yes, `<Plug>` is a "key" of sorts. If you look at `:help <Plug>`, you'll discover that it "can be used for an internal mapping, which is not to be matched with any key sequence". If you follow some links, you'll also find it's "a special code that a typed key will never produce".
+It maps the (fake) key sequence `<Plug><cfile>` to the expression `rails#cfile('delegate')`. Yes, `<Plug>` is a "key" of sorts. If you look at `:help <Plug>`, you'll discover that it "can be used for an internal mapping, which is not to be matched with any key sequence". If you follow some links, you'll also find it's "a special code that a typed key will never produce".
 
 In general, `<cfile>` is something that expands on the command line to the filename under the cursor, based on Vim's built-in rules for recognizing a filename. What Tim Pope does here is create a *new* expression, `<Plug><cfile>`, which expands to whatever `rails#cfile('delegate')` returns.
 
@@ -256,4 +256,4 @@ There's a few Vimscript-y weirdnesses in there, but hopefully, it should be read
 
 The `gf` mapping is a useful abstraction to navigate your code, and extending it yourself is not super difficult to do. You take the text under the cursor, pick it apart with regexes and figure out what the path you're looking for is. You do need some background knowledge, but the `:help` files are always nearby to help you out. If you're working on a particular framework that doesn't have special support for it, consider writing your own.
 
-If you've never written Vimscript so far, it could be a nice introduction that'll give you a good productivity boost. Hope this blog post has given you some basic tools to get you started, and some clever ideas to inspire you to keep going.
+If you've never written Vimscript so far, it could be a nice introduction that'll give you a good productivity boost. Hope this article has given you some basic tools to get you started, and some clever ideas to inspire you to keep going.
