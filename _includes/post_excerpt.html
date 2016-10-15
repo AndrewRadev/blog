@@ -3,9 +3,9 @@
 
   <h2>
     <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-  </h2>
 
-  <span class="post-categories">Categories: {{ post.categories | category_links }}</span>
+    <span class="post-categories">[{{ post.categories | category_links }}]</span>
+  </h2>
 
   <article>
     {{ post.excerpt | markdownify }}

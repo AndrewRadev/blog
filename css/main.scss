@@ -48,3 +48,15 @@ $on-laptop:        800px;
   float: left;
   margin-right: 30px;
 }
+
+.rss-subscribe {
+  float: right;
+}
+
+.post-categories {
+  font-size: $base-font-size;
+}
+
+.post-content h2 {
+  border-bottom: 1px solid #ccc;
+}
