@@ -89,7 +89,7 @@ particular talk:
   knowledge we'd gained from the start of the semester. It was like watching
   the exciting reveal to a detective story.
 
-The best part about presentations is that it's not even hard to make useful
+The best thing about presentations is that it's not even hard to make useful
 slides. Note that I don't say "great" or even "good", just "useful". You don't
 have to weave a complex tale with eye-catching illustrations and hilarious
 jokes to make a set of useful slides. There are a few simple rules I can think
@@ -182,9 +182,9 @@ motivation. I don't think that the classroom should turn to using gimmicks and
 games every single day in order to maintain interest. This would be difficult
 to maintain in the long term, and it's unclear whether actual knowledge will be
 kept afterwards. I've had bad experiences in university with a lecturer trying
-to show mostly pretty pictures and fun videos during class, only to be met with
-a course of people that lack understanding of even the simplest theorems, due
-to focusing only on the fun bits. But incrementally improving the classes
+to show mostly pretty pictures and fun videos during class, only to end up with
+a full class of people that lack understanding of even the simplest theorems,
+due to focusing only on the fun bits. But incrementally improving the classes
 themselves, making even the boring parts of the subject a bit more memorable
 with visual cues and repetition, could actually work, I believe. Especially if
 it's done every single class in a consistent, unobtrusive way. We are creatures
