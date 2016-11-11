@@ -68,9 +68,9 @@ data RPS = Rock | Paper | Scissors
   deriving Typeable
 ```
 
-As mentioned, I'm very inexperienced in haskell, but on a first glance, this
+As mentioned, I'm very inexperienced in haskell, but at a first glance, this
 seems awfully opposed to the language's philosophy. I suppose in the hands of
-elder haskell wizards, this could be a very powerful tool, but on the beginner
+elder haskell wizards, it could be a very powerful tool, but on the beginner
 level, I'd avoid it, because it seems like it could cause a lot of issues.
 You'll see one of those a bit further below.
 
