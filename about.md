@@ -12,6 +12,8 @@ Professionally, I code mostly in [Ruby](http://ruby-lang.org), [Rails](http://ru
 
 I'm a dedicated [Vim](http://vim.org) user and I've created a [bunch of Vim plugins](http://www.vim.org/account/profile.php?user_id=31799). I maintain the [VimLinks](https://twitter.com/vimlinks) twitter account, I'm one of the maintainers of the [official ruby bindings for vim](https://github.com/vim-ruby/vim-ruby) (but I'm pretty bad at keeping up with the work there), and I own the runtime files for Vim's [eco support](https://github.com/AndrewRadev/vim-eco).
 
+Occasionally, I speak at conferences, and I've put most of the videos in one [youtube playlist](https://www.youtube.com/playlist?list=PL_pobXkumxw7yYW0_bmPY-uk0XkwoRgtK). Most of them are in Bulgarian, but I've noted the language of each one in the playlist. I've also got a [playlist of Vim-related screencasts](https://www.youtube.com/playlist?list=PL_pobXkumxw6uu-IVW2j5LfCmjNzoIjip), though it's annoyingly short. I should get back to that, one of these days.
+
 In this blog, I write about my programming-related experiences. Most of the articles seem to be about Vim, but I do write about other stuff as well, I promise.
 
 Here are a few of my projects that I find interesting:
