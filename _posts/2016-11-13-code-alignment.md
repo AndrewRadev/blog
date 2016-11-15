@@ -95,7 +95,7 @@ But this one can be hard to maintain automatically. I might do it if it's isolat
 
 ## Drawbacks
 
-Code like this can be more difficult to edit. You need to have an editor tool to help you (like [this](https://github.com/vim-scripts/Align), or [this](https://github.com/godlygeek/tabular), or [this](https://github.com/junegunn/vim-easy-align)), and I think many people don't, and align the code manually. Which doesn't seem like a great idea. I don't feel it's worth enough to waste energy on it if your editor doesn't have the tooling to do it easily.
+Code like this can be more difficult to edit. You need to have an editor tool to help you (like [this](https://github.com/vim-scripts/Align), or [this](https://github.com/godlygeek/tabular), or [this](https://github.com/junegunn/vim-easy-align)), and I think many people don't, and align the code manually. Which doesn't seem like a great idea. I don't feel it's worth enough to waste energy on it if your and your teammates' editors don't have the tooling to do it easily.
 
 Then there's the issue with VCS logs. Every alignment change due to a new item means touching a lot of other items. Mind you, with `git diff`, there's the `-b`/`--ignore-space-change` flag, so it might not be a huge problem in practice.
 
@@ -139,5 +139,7 @@ payment_plans_for_select_box = [
 I'd also go for it in the testing case, where you often have a setup phase with several invocations of the same functions with different parameters. For anything else, it depends, and it seems like mostly personal preference. The "similar enough structure" idea is my key guiding point, in all cases.
 
 It's tricky to apply, because it's very contextual. How much is "similar enough"? Difficult to say. And it's definitely not something that an automated tool can determine (at this time). It's one of the reasons I dislike `gofmt`, it removes any alignment even when there would be a very noticeable benefit from it.
+
+**Update**: Turns out, not exactly. Gofmt removes alignment from, say, multiple `var` lines, but if they're grouped in a single `var ( )` statement, it actually aligns them. Which makes sense, I suppose -- it provides a way for the developer to communicate "this is a group with similarities", and the tool responds to it.
 
 Either way, whether you decide to apply this rule or not, it's a good idea to know *why*, in more concrete terms than "it feels right/wrong". I hope I've given you a possible answer to this question.
