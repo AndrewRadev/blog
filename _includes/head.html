@@ -5,6 +5,8 @@
 
   <meta property="og:type" content="website" />
   <meta property="og:image" content="/images/favicons/android-chrome-256x256.png" />
+  <meta property="og:title" content="{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}" />
+
   <meta name="twitter:creator:id" content="@AndrewRadev" />
   <meta name="twitter:image" content="/images/favicons/android-chrome-256x256.png" />
 
