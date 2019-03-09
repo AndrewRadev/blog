@@ -4,11 +4,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="/images/favicons/android-chrome-256x256.png" />
+  <meta property="og:image" content="{{ site.url }}/images/favicons/android-chrome-256x256.png" />
   <meta property="og:title" content="{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}" />
+  <meta property="og:description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
 
-  <meta name="twitter:creator:id" content="@AndrewRadev" />
-  <meta name="twitter:image" content="/images/favicons/android-chrome-256x256.png" />
+  <meta name="twitter:type" content="website" />
+  <meta name="twitter:site" content="@AndrewRadev" />
+  <meta name="twitter:image" content="{{ site.url }}/images/favicons/android-chrome-256x256.png" />
 
   <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
