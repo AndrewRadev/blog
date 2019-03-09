@@ -3,13 +3,25 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  <meta name="twitter:creator:id" content="@AndrewRadev" />
+  <meta name="twitter:image" content="/images/favicons/android-chrome-256x256.png" />
+
   <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
 
   <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
-  <link rel="shortcut icon" href="{{ "/favicon.png" | prepend: site.baseurl }}">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon.png?v=alQGBL3NmL">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicons/favicon-32x32.png?v=alQGBL3NmL">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicons/favicon-16x16.png?v=alQGBL3NmL">
+  <link rel="manifest" href="/images/favicons/site.webmanifest?v=alQGBL3NmL">
+  <link rel="mask-icon" href="/images/favicons/safari-pinned-tab.svg?v=alQGBL3NmL" color="#5bbad5">
+  <link rel="shortcut icon" href="/images/favicons/favicon.ico?v=alQGBL3NmL">
+  <meta name="msapplication-TileColor" content="#603cba">
+  <meta name="msapplication-config" content="/images/favicons/browserconfig.xml?v=alQGBL3NmL">
+  <meta name="theme-color" content="#ffffff">
 </head>
 
 

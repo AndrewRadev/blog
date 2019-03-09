@@ -1,7 +1,7 @@
 title: Andrew's Blog
 email: andrey.radev@gmail.com
 description:
-  Just another programming blog with an uninspired title
+  Vim, Rust, Ruby, and whatever other tech-related topic I'm currently interested in.
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://andrewradev.com"
 twitter_username: AndrewRadev
