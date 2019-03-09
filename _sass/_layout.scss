@@ -92,8 +92,6 @@
     }
 }
 
-
-
 /**
  * Site footer
  */
@@ -162,8 +160,6 @@
     }
 }
 
-
-
 /**
  * Page content
  */
@@ -189,12 +185,16 @@
     color: $grey-color;
 }
 
+.post-categories {
+    color: $grey-color;
+    font-size: $small-font-size;
+    a { font-size: $small-font-size; }
+}
+
 .post-link {
     display: block;
     font-size: 24px;
 }
-
-
 
 /**
  * Posts

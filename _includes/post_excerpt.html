@@ -10,6 +10,8 @@
   <article>
     {{ post.excerpt | markdownify }}
 
-    <a href="{{ post.url | prepend: site.baseurl }}">[...]</a>
+    <div class="post-meta">
+      [<a href="{{ post.url | prepend: site.baseurl }}">Read article ➡️</a>]
+    </div>
   </article>
 </li>
