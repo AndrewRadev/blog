@@ -2,9 +2,9 @@ title: Andrew's Blog
 html_title: <img title="A" class="title-letter" src="/images/title-letter.png" />ndrew's Blog
 email: andrey.radev@gmail.com
 description:
-  Vim, Rust, Ruby, and whatever other tech-related topic I'm currently interested in.
+  Vim, Rust, Ruby, and assorted tech.
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://andrewradev.com"
+url: "//andrewradev.com"
 twitter_username: AndrewRadev
 github_username:  AndrewRadev
 excerpt_separator: '<!-- more -->'

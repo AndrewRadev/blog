@@ -8,27 +8,33 @@ permalink: /about/
 
 Hi, my name's Andrew and I'm a programmer. You can find me as "AndrewRadev" on [github](http://github.com/AndrewRadev) and on [twitter](http://twitter.com/AndrewRadev).
 
-Professionally, I code mostly in Ruby, Rails, and a bit of Ember.js. In my spare time (and very non-professionally), I try to play around with all sorts of other stuff: [Image processing](https://github.com/AndrewRadev/image-processing), gamedev with Unity, [opengl and webgl](https://github.com/AndrewRadev/green-cubes), [Android](https://github.com/AndrewRadev/android_notes), [electronics](http://andrewradev.com/2012/01/08/first-steps-with-arduino/), and any fun programming-related thing that crosses my path.
+Professionally, I code mostly in Ruby and Rails. In my spare time (and very non-professionally), I try to play around with all sorts of other stuff: [Image processing](https://github.com/AndrewRadev/image-processing), gamedev with Unity, [opengl and webgl](https://github.com/AndrewRadev/green-cubes), [Android](https://github.com/AndrewRadev/android_notes), [electronics](http://andrewradev.com/2012/01/08/first-steps-with-arduino/), and any fun programming-related thing that crosses my path.
 
-Recently, I've been building most of my side-projects in Rust. I've grown fond enough of the language to start teaching it [in Sofia University](https://fmi.rust-lang.bg/). I don't have quite that many interesting rust repos in my github profile, but I'll very likely open-source a few toy projects as I go.
+<div style="clear: both; margin-top: 50px;"></div>
 
-I'm a dedicated Vim user and I've created a [bunch of Vim plugins](http://www.vim.org/account/profile.php?user_id=31799). I maintain the [VimLinks](https://twitter.com/vimlinks) twitter account, I'm one of the maintainers of the [official ruby bindings for vim](https://github.com/vim-ruby/vim-ruby) (but I'm pretty bad at keeping up with the work there), and I own the runtime files for Vim's [eco support](https://github.com/AndrewRadev/vim-eco).
+## Rust
 
-Occasionally, I speak at conferences, and I've put most of the videos in one [youtube playlist](https://www.youtube.com/playlist?list=PL_pobXkumxw7yYW0_bmPY-uk0XkwoRgtK). Most of them happen to be in Bulgarian. I've also got a [playlist of Vim-related screencasts](https://www.youtube.com/playlist?list=PL_pobXkumxw6uu-IVW2j5LfCmjNzoIjip), though it's annoyingly short. I should get back to that, one of these days.
+Recently, I've been building most of my side-projects in Rust. I've grown fond enough of the language to start teaching it [in Sofia University](https://fmi.rust-lang.bg/). I've got a bunch of half-baked experiments, but a few usable ones as well:
 
-In this blog, I write about my programming-related experiences. Most of the articles seem to be about Vim, but I do write about other stuff as well, I promise.
+- [id3-image](https://github.com/AndrewRadev/id3-image) allows easy manipulation of images embedded in mp3s. Think cover art and thumbnails.
+- [cargo-src](https://github.com/AndrewRadev/cargo-src) lets you find the local source code of packages, useful for exploring them with an editor or generating tags.
 
-Here are a few of my projects that I find interesting:
+## Ruby
 
-- [vimrunner](https://github.com/AndrewRadev/Vimrunner) is a ruby library that lets you spawn a vim instance and control it. This could be useful for integration tests for vim plugins and it's actually being used for CI in [some of my own plugins](http://travis-ci.org/#!/AndrewRadev/splitjoin.vim) and a few others (like [runspec.vim](http://travis-ci.org/#!/mudge/runspec.vim), [vim-elixir](https://github.com/elixir-editors/vim-elixir)).
-- [daily_sites](http://daily-sites.andrewradev.com) is a small website I use to manage my everyday reading list.
+I don't have that many published Ruby gems, compared to how long I've been working on the language. I guess working professionally in it means I tend to focus spare time on other things. Here's a few of my projects, though:
+
+- [vimrunner](https://github.com/AndrewRadev/Vimrunner) is a ruby library that lets you spawn a vim instance and control it. This could be useful for integration tests for vim plugins and it's actually being used for CI in [some of my own plugins](http://travis-ci.org/#!/AndrewRadev/splitjoin.vim) and a few others (like [runspec.vim](http://travis-ci.org/#!/mudge/runspec.vim), [vim-elixir](https://github.com/elixir-editors/vim-elixir), [vim-ruby](https://github.com/vim-ruby/vim-ruby)).
+- [progressor](https://github.com/AndrewRadev/progressor) is a ruby gem that lets you measure loops of a long-running task and show some estimation of the remaining time. Useful for long data migrations, for instance.
 - [ctags_reader](https://github.com/AndrewRadev/ctags_reader) is a little library to read ctags "tags" files and give you an interface to query them in a similar way that a text editor would. It's useful for some super-simple static analysis of code. I've used it to generate documentation links in non-API docs.
-- [image-processing](https://github.com/AndrewRadev/image-processing) is an implementation of a bunch of simple image processing algorithms in ruby, using the [chunky_png](https://github.com/wvanbergen/chunky_png) library. It's mostly an exercise, though I'd love to improve them and actually figure out a good use for them. And possibly rewrite them in, say, Rust.
 - [waiting-on-rails](https://github.com/AndrewRadev/waiting-on-rails) runs the `rails` command, while also playing some relaxing elevator music until the server boots. Convenient for that legacy monolith you need to start up every morning.
-- [digits](https://github.com/AndrewRadev/digits) is a university project in C that attempts to recognize a digit from a given image. It's very limited, but it was an interesting exercise in image recognition.
-- [green-cubes](https://github.com/AndrewRadev/green-cubes) is just a tiny webgl experiment for my talk at [BurgasConf 2014](https://github.com/AndrewRadev/BurgasConf-2014).
+- [image-processing](https://github.com/AndrewRadev/image-processing) is an implementation of a bunch of simple image processing algorithms in ruby, using the [chunky_png](https://github.com/wvanbergen/chunky_png) library. It's mostly an exercise, though I'd love to improve them and actually figure out a good use for them. And possibly rewrite them in, say, Rust.
+- [daily_sites](http://daily-sites.andrewradev.com) is a small website I use to manage my everyday reading list.
 
-And some Vim plugins, if you're into that:
+## Vim
+
+I'm a dedicated Vim user and I've created [quite a few Vim plugins](http://www.vim.org/account/profile.php?user_id=31799). I maintain the [VimLinks](https://twitter.com/vimlinks) twitter account, I'm one of the maintainers of the [official ruby bindings for vim](https://github.com/vim-ruby/vim-ruby) (but I'm pretty bad at keeping up with the work there), and I own the runtime files for Vim's [eco support](https://github.com/AndrewRadev/vim-eco).
+
+A few of the more interesting ones:
 
 - [splitjoin](https://github.com/AndrewRadev/splitjoin.vim) lets you switch between multiline and single-line versions of the same code.
 - [linediff](https://github.com/AndrewRadev/linediff.vim) lets you diff blocks of code instead of files.
@@ -41,5 +47,17 @@ And some Vim plugins, if you're into that:
 - [undoquit](https://github.com/AndrewRadev/undoquit.vim) is like a "Restore Tab" button for Vim, except it also works for splits. A window that was closed with `:quit` can be reopened with a keymap.
 - [ember_tools](https://github.com/AndrewRadev/ember_tools.vim) provides some useful tools to work with an ember.js project.
 - [gnugo](https://github.com/AndrewRadev/gnugo.vim) is a UI around a [GnuGo](https://www.gnu.org/software/gnugo/) process -- it lets you play Go right in your Vim.
+- [id3](https://github.com/AndrewRadev/id3.vim) lets you "edit" mp3 files by editing their ID3 tags. It also handles flac files, so I might just rename it to something more appropriate one of these days.
+- [discotheque](https://github.com/AndrewRadev/discotheque.vim) is a bit of a joke, but an entertaining one to have installed, I feel.
 
-If you're a Vim user, you might also like to look around my [Vimfiles](https://github.com/AndrewRadev/Vimfiles).
+If you're a Vim user, you might also like to look around my [Vimfiles](https://github.com/AndrewRadev/Vimfiles). The README might point you in the right directions to explore.
+
+## Videos
+
+I've got a playlist of Vim-related screencasts, mostly of my own plugins or setup:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PL_pobXkumxw6uu-IVW2j5LfCmjNzoIjip" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+Occasionally, I speak at conferences, and I've put most of the videos in one youtube playlist. Most of them happen to be in Bulgarian, but if it has an English title, it should be in English:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PL_pobXkumxw7yYW0_bmPY-uk0XkwoRgtK" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
