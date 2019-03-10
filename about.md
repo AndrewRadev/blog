@@ -4,7 +4,7 @@ title: About me
 permalink: /about/
 ---
 
-<img class="about-image" src="http://gravatar.com/avatar/fc59401781a26b10f5d4fc5b758fb3b7.png?s=192" alt="Hello, there" />
+<img class="about-image" src="/images/avatar_castle.png" alt="Hello, there" />
 
 Hi, my name's Andrew and I'm a programmer. You can find me as "AndrewRadev" on [github](http://github.com/AndrewRadev) and on [twitter](http://twitter.com/AndrewRadev).
 
