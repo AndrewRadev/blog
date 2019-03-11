@@ -4,7 +4,7 @@ email: andrey.radev@gmail.com
 description:
   Vim, Rust, Ruby, and assorted tech.
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "//andrewradev.com"
+url: "http://andrewradev.com"
 twitter_username: AndrewRadev
 github_username:  AndrewRadev
 excerpt_separator: '<!-- more -->'
