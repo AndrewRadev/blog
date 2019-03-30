@@ -20,5 +20,5 @@ exclude:
   - 'deploy'
 
 # Include additional plugins
-gems:
+plugins:
   - 'jekyll-paginate'
