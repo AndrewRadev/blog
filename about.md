@@ -17,7 +17,7 @@ Professionally, I code mostly in Ruby and Rails. In my spare time (and very non-
 Recently, I've been building most of my side-projects in Rust. I've grown fond enough of the language to start teaching it [in Sofia University](https://fmi.rust-lang.bg/). I've got a bunch of half-baked experiments, but a few usable ones as well:
 
 - [id3-image](https://github.com/AndrewRadev/id3-image) allows easy manipulation of images embedded in mp3s. Think cover art and thumbnails.
-- [cargo-src](https://github.com/AndrewRadev/cargo-src) lets you find the local source code of packages, useful for exploring them with an editor or generating tags.
+- [cargo-local](https://github.com/AndrewRadev/cargo-local) lets you find the local source code of packages, useful for exploring them with an editor or generating tags.
 
 ## Ruby
 
