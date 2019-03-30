@@ -34,9 +34,9 @@ $on-laptop:        900px;
 //     }
 // }
 @mixin media-query($device) {
-  @media screen and (max-width: $device) {
-    @content;
-  }
+    @media screen and (max-width: $device) {
+        @content;
+    }
 }
 
 // Import partials from `sass_dir` (defaults to `_sass`)
@@ -45,25 +45,39 @@ $on-laptop:        900px;
 @import "syntax-highlighting";
 
 .about-image {
-  float: left;
-  margin-right: 30px;
+    float: left;
+    margin-right: 30px;
 }
 
 .rss-subscribe {
-  float: right;
+    float: right;
 }
 
 .post-categories {
-  font-size: $base-font-size;
+    font-size: $base-font-size;
 }
 
 .post-content h2 {
-  border-bottom: 1px solid #ccc;
+    position: relative;
+    border-bottom: 1px solid #ccc;
+
+    a {
+        font-size: 20px;
+        position: absolute;
+        right: 0;
+        bottom: 9px;
+        visibility: hidden;
+        color: #000;
+    }
+    &:hover a, a:hover {
+        visibility: visible;
+        text-decoration: none;
+    }
 }
 
 .title-letter {
-  margin-bottom: 5px;
-  margin-right: -1px;
+    margin-bottom: 5px;
+    margin-right: -1px;
 }
 
 .pagination {
