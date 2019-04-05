@@ -89,9 +89,7 @@ $on-laptop:        900px;
     }
 }
 
-.home .post-list {
-    li {
-        padding-bottom: $spacing-unit;
-        border-bottom: 1px solid #ccc;
-    }
+.home .post-list > li {
+    padding-bottom: $spacing-unit;
+    border-bottom: 1px solid #ccc;
 }
