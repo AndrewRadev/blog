@@ -200,6 +200,15 @@ module Jekyll
   # Adds some extra filters used during the category creation process.
   module CategoryGeneratorFilters
 
+    # Outputs a single category as an <a> link
+    def category_link(category)
+      base_dir = @context.registers[:site].config['category_dir']
+      category_dir = GenerateCategories.category_dir(base_dir, category)
+      # Make sure the category directory begins with a slash.
+      category_dir = "/#{category_dir}" unless category_dir =~ /^\//
+      "<a class='category' href='#{category_dir}/'>#{category}</a>"
+    end
+
     # Outputs a list of categories as comma-separated <a> links. This is used
     # to output the category list for each post on a category page.
     #
@@ -207,13 +216,7 @@ module Jekyll
     #
     # Returns string
     def category_links(categories)
-      base_dir = @context.registers[:site].config['category_dir']
-      categories = categories.sort!.map do |category|
-        category_dir = GenerateCategories.category_dir(base_dir, category)
-        # Make sure the category directory begins with a slash.
-        category_dir = "/#{category_dir}" unless category_dir =~ /^\//
-        "<a class='category' href='#{category_dir}/'>#{category}</a>"
-      end
+      categories = categories.sort.map { |category| category_link(category) }
 
       case categories.length
       when 0

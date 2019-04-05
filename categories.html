@@ -1,0 +1,15 @@
+---
+layout: default
+---
+
+<div class="categories">
+  <h1 class="page-heading">All categories</h1>
+
+  <ul class="category-list">
+    {% assign categories = site.categories | sort %}
+
+    {% for category_with_posts in categories %}
+      <li>{{ category_with_posts[0] | category_link }}</li>
+    {% endfor %}
+  </ul>
+</div>
