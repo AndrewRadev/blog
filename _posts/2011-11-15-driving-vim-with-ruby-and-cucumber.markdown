@@ -3,7 +3,7 @@ layout: post
 title: "Driving Vim With Ruby and Cucumber"
 date: 2011-11-15 19:26
 comments: true
-categories: [vim, ruby]
+categories: [vim, ruby, testing]
 published: true
 ---
 
