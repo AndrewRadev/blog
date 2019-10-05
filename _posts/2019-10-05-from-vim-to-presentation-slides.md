@@ -73,7 +73,7 @@ Keynote might be much better, but I'm not a Mac user, so I couldn't say.
 
 ### Would this method work with Keynote?
 
-Probably, yes. I have a friend that uses basically the same setup for Keynote. Though, you'd need to tweak some of the commands to launch Keynote and some other word processor instead of LibreOffice.
+Probably yes, but I can't be sure. You'd need to tweak some of the commands to launch Keynote and some other word processor instead of LibreOffice.
 
 ### What about using screenshots instead?
 
