@@ -7,7 +7,7 @@ categories: vim talks
 published: true
 ---
 
-There's a little-known Vim command called [`:TOhtml`](https://vimhelp.org/syntax.txt.html#%3ATOhtml) that does something quite surprising for a built-in -- it converts the current Vim window into raw HTML. This includes syntax highlighting for code, and even line numbers. It can convert the full buffer or a range of selected lines.
+There's a little-known Vim command called [`:TOhtml`](https://vimhelp.org/syntax.txt.html#convert-to-HTML) that does something quite surprising for a built-in -- it converts the current Vim window into raw HTML. This includes syntax highlighting for code, and even line numbers. It can convert the full buffer or a range of selected lines.
 
 While I've always considered it a fun trick, it was somewhat recently that I realized it has a very practical use -- to paste syntax-highlighted code into presentation slides.
 
