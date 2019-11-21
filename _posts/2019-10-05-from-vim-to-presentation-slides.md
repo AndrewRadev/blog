@@ -67,7 +67,7 @@ Some of this might be LibreOffice bugs, or it might be me not using it correctly
 
 ### Why use LibreOffice at all then?
 
-Frameworks like impress.js are pretty good for code, but I find them less flexible in terms of just positioning graphics and such around. Even with code, I'd occasionally like position it weirdly or appear chunks of code one by one, and the PowerPoint model of making presentations gives me that flexibility.
+Frameworks like impress.js are pretty good for code, but I find them less flexible in terms of just positioning graphics and such around. Even with code, I'd occasionally like to position it weirdly or appearify chunks of code one by one, and the PowerPoint model of making presentations gives me that flexibility.
 
 Keynote might be much better, but I'm not a Mac user, so I couldn't say.
 
@@ -79,4 +79,4 @@ Probably yes, but I can't be sure. You'd need to tweak some of the commands to l
 
 It's an option, but code-as-text means you can make small edits later. It also allows people to select the code from the slides afterwards, even if you export them to PDF.
 
-Mind you, with the existence of tools like [vim-silicon](https://github.com/segeljakt/vim-silicon), screenshots are certainly an interesting option.
+Mind you, with the existence of tools like [vim-silicon](https://github.com/segeljakt/vim-silicon), screenshots are certainly a more interesting option nowadays.
