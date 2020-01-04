@@ -1,6 +1,6 @@
 title: Andrew's Blog
 html_title: <img title="A" class="title-letter" src="/images/title-letter.svg" height="32" />ndrew's Blog
-email: andrey.radev@gmail.com
+email: andrew.radev@protonmail.com
 description:
   Vim, Rust, Ruby, and assorted tech.
 baseurl: "" # the subpath of your site, e.g. /blog/
