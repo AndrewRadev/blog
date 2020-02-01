@@ -1,10 +1,10 @@
 title: Andrew's Blog
 html_title: <img title="A" class="title-letter" src="/images/title-letter.svg" height="32" />ndrew's Blog
-email: andrew.radev@protonmail.com
+email: contact@andrewra.dev
 description:
   Vim, Rust, Ruby, and assorted tech.
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://andrewradev.com"
+url: "https://andrewra.dev"
 twitter_username: AndrewRadev
 github_username:  AndrewRadev
 excerpt_separator: '<!-- more -->'
