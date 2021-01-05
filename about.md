@@ -18,6 +18,7 @@ Recently, I've been building most of my side-projects in Rust. I've grown fond e
 
 - [id3-image](https://github.com/AndrewRadev/id3-image) allows easy manipulation of images embedded in mp3s. Think cover art and thumbnails.
 - [cargo-local](https://github.com/AndrewRadev/cargo-local) lets you find the local source code of packages, useful for exploring them with an editor or generating tags.
+- [quickmd](https://github.com/AndrewRadev/quickmd) is a fast, self-contained markdown previewer.
 
 ## Ruby
 
@@ -38,6 +39,7 @@ A few of the more interesting ones:
 
 - [splitjoin](https://github.com/AndrewRadev/splitjoin.vim) lets you switch between multiline and single-line versions of the same code.
 - [linediff](https://github.com/AndrewRadev/linediff.vim) lets you diff blocks of code instead of files.
+- [tagalong](https://github.com/AndrewRadev/tagalong.vim) automatically changes a closing HTML tags when you edit the opening one.
 - [inline_edit](https://github.com/AndrewRadev/inline_edit.vim) makes it easier to edit code that's embedded in other code, like script tags within HTML.
 - [switch](https://github.com/AndrewRadev/switch.vim) changes code in predetermined ways depending on what is currently under the cursor.
 - [sideways](https://github.com/AndrewRadev/sideways.vim) moves items in lists (argument lists, arrays) to the left and to the right. It also provides a text object for "item in argument list", which is arguably the more useful part of the plugin.
