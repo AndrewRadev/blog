@@ -1,5 +1,5 @@
 title: Andrew's Blog
-html_title: <img title="A" class="title-letter" src="/images/title-letter.svg" height="32" />ndrew's Blog
+html_title: <img title="A" class="title-letter" src="/images/title-letter.svg" width="32" height="32" />ndrew's Blog
 email: contact@andrewra.dev
 description:
   Vim, Rust, Ruby, and assorted tech.
