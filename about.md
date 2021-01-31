@@ -14,7 +14,7 @@ Professionally, I code mostly in Ruby and Rails. In my spare time (and very non-
 
 ## Rust
 
-Recently, I've been building most of my side-projects in Rust. I've grown fond enough of the language to start teaching it [in Sofia University](https://fmi.rust-lang.bg/). I've got a bunch of half-baked experiments, but a few usable ones as well:
+Recently, I've been building most of my side-projects in Rust. I've grown fond enough of the language to start teaching it [at Sofia University](https://fmi.rust-lang.bg/). I've got a bunch of half-baked experiments, but a few usable ones as well:
 
 - [id3-image](https://github.com/AndrewRadev/id3-image) allows easy manipulation of images embedded in mp3s. Think cover art and thumbnails.
 - [cargo-local](https://github.com/AndrewRadev/cargo-local) lets you find the local source code of packages, useful for exploring them with an editor or generating tags.
@@ -22,9 +22,9 @@ Recently, I've been building most of my side-projects in Rust. I've grown fond e
 
 ## Ruby
 
-I don't have that many published Ruby gems, compared to how long I've been working on the language. I guess working professionally in it means I tend to focus spare time on other things. Here's a few of my projects, though:
+I don't have that many published Ruby gems, compared to how long I've been working on the language. I guess working professionally in it means I tend to focus my spare time on other things, for the sake of variety. Here's a few of my projects, though:
 
-- [vimrunner](https://github.com/AndrewRadev/Vimrunner) is a ruby library that lets you spawn a vim instance and control it. This could be useful for integration tests for vim plugins and it's actually being used for CI in [some of my own plugins](http://travis-ci.org/#!/AndrewRadev/splitjoin.vim) and a few others (like [runspec.vim](http://travis-ci.org/#!/mudge/runspec.vim), [vim-elixir](https://github.com/elixir-editors/vim-elixir), [vim-ruby](https://github.com/vim-ruby/vim-ruby)).
+- [vimrunner](https://github.com/AndrewRadev/Vimrunner) is a ruby library that lets you spawn a Vim instance and control it. This could be useful for integration tests for Vim plugins and it's actually being used for CI in [some of my own plugins](http://travis-ci.org/#!/AndrewRadev/splitjoin.vim) and a few others (like [runspec.vim](http://travis-ci.org/#!/mudge/runspec.vim), [vim-elixir](https://github.com/elixir-editors/vim-elixir), [vim-ruby](https://github.com/vim-ruby/vim-ruby)).
 - [progressor](https://github.com/AndrewRadev/progressor) is a ruby gem that lets you measure loops of a long-running task and show some estimation of the remaining time. Useful for long data migrations, for instance.
 - [ctags_reader](https://github.com/AndrewRadev/ctags_reader) is a little library to read ctags "tags" files and give you an interface to query them in a similar way that a text editor would. It's useful for some super-simple static analysis of code. I've used it to generate documentation links in non-API docs.
 - [waiting-on-rails](https://github.com/AndrewRadev/waiting-on-rails) runs the `rails` command, while also playing some relaxing elevator music until the server boots. Convenient for that legacy monolith you need to start up every morning.
@@ -33,7 +33,7 @@ I don't have that many published Ruby gems, compared to how long I've been worki
 
 ## Vim
 
-I'm a dedicated Vim user and I've created [quite a few Vim plugins](http://www.vim.org/account/profile.php?user_id=31799). I maintain the [VimLinks](https://twitter.com/vimlinks) twitter account, I'm one of the maintainers of the [official ruby bindings for vim](https://github.com/vim-ruby/vim-ruby) (but I'm pretty bad at keeping up with the work there), and I own the runtime files for Vim's [eco support](https://github.com/AndrewRadev/vim-eco).
+I'm a dedicated Vim user and I've created [quite a few Vim plugins](http://www.vim.org/account/profile.php?user_id=31799). I maintain the [VimLinks](https://twitter.com/vimlinks) twitter account, I'm one of the maintainers of the [official ruby bindings for Vim](https://github.com/vim-ruby/vim-ruby) (but I'm pretty bad at keeping up with the work there), and I own the runtime files for Vim's [eco support](https://github.com/AndrewRadev/vim-eco) (though they haven't needed refreshing in a long, long while).
 
 A few of the more interesting ones:
 
@@ -50,7 +50,7 @@ A few of the more interesting ones:
 - [ember_tools](https://github.com/AndrewRadev/ember_tools.vim) provides some useful tools to work with an ember.js project.
 - [gnugo](https://github.com/AndrewRadev/gnugo.vim) is a UI around a [GnuGo](https://www.gnu.org/software/gnugo/) process -- it lets you play Go right in your Vim.
 - [id3](https://github.com/AndrewRadev/id3.vim) lets you "edit" mp3 files by editing their ID3 tags. It also handles flac files, so I might just rename it to something more appropriate one of these days.
-- [discotheque](https://github.com/AndrewRadev/discotheque.vim) is a bit of a joke, but an entertaining one to have installed, I feel.
+- [discotheque](https://github.com/AndrewRadev/discotheque.vim) is a bit of a joke, but it can be a fun party trick.
 
 If you're a Vim user, you might also like to look around my [Vimfiles](https://github.com/AndrewRadev/Vimfiles). The README might point you in the right directions to explore.
 
