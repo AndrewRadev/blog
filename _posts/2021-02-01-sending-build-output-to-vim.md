@@ -128,7 +128,7 @@ The end result is a `cargo vim build` that produces something like this:
 
 ## Was this really necessary?
 
-You don't need any of this if you're fine with change your mental patterns a little bit. You can easily have the "compiler" setup in `~/.vim/ftplugin/rust.vim`:
+You don't need any of this if you're fine with changing your mental patterns a little bit. You can easily have the "compiler" setup in `~/.vim/ftplugin/rust.vim`:
 
 ``` vim
 compiler cargo
