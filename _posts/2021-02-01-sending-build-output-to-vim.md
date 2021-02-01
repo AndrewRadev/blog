@@ -7,7 +7,7 @@ categories: vim rust
 published: true
 ---
 
-Vim is actually quite easy to build from source. You can edit `src/Makefile` and enable features and custom language extensions. Turns out, I hadn't scrolled through that file in a while, since version [8.0.1295](https://github.com/vim/vim/commit/e42a6d250907e278707753d7d1ba91ffc2471db0) comes with an interesting addition -- the compilation flag `--enable-autoservername`.
+Vim is actually quite easy to build from source with a `make install`. You can edit `src/Makefile` to enable features and custom language extensions. Turns out, I hadn't scrolled through that file in a while, since version [8.0.1295](https://github.com/vim/vim/commit/e42a6d250907e278707753d7d1ba91ffc2471db0) comes with an interesting addition -- the compilation flag `--enable-autoservername`.
 
 Running the editor with a `--servername` parameter allows remote connections from a different instance using command-line flags or function calls. I've been using this functionality to build a [custom testing framework](https://github.com/AndrewRadev/vimrunner) in Ruby, but you have to knowingly launch it with that flag. Now, each instance can be available to connect with by default.
 
