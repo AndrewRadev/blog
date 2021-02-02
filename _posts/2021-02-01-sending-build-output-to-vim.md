@@ -3,7 +3,7 @@ layout: post
 title: "Sending Build Output to Vim"
 date: 2021-02-01 16:40
 comments: true
-categories: vim rust
+categories: vim rust ruby
 published: true
 ---
 
@@ -31,12 +31,12 @@ First, let's decide where to send the output. There might be multiple instances,
 
 ``` ruby
 # Let's get a list of all available instances:
-vim_instances = %x[vim --serverlist].lines.map(&:strip)
+vim_instances = `vim --serverlist`.lines.map(&:strip)
 cwd           = FileUtils.pwd
 
 servername = vim_instances.find do |candidate|
   # Use --remote-expr to get the results of `getcwd()` from each of the Vims:
-  candidate_wd = %x[vim --servername #{candidate} --remote-expr 'getcwd()'].strip
+  candidate_wd = `vim --servername #{candidate} --remote-expr 'getcwd()'`.strip
 
   # The one we're looking for should have a  current working directory that's
   # somewhere under the command's working directory:
